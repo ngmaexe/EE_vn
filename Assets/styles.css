@@ -1,0 +1,401 @@
+* {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background-color: #ffc877;
+}
+
+body {
+  font-family: Tahoma, "Arial Unicode MS", Gentium;
+  font-size: 10pt;
+  color: black;
+  line-height: 15pt;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+td {
+  font-family: Tahoma, "Arial Unicode MS", Gentium;
+  font-size: 10pt;
+  color: black;
+  line-height: 15pt;
+}
+
+p {
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+a {
+  text-decoration: none;
+  color: #000080;
+}
+
+ol {
+  margin-left: 40px;
+}
+
+ol li {
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+ul {
+  margin-left: 40px;
+}
+
+ul li {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+/* Books */
+.book_contents_chapter_number {
+  font-size: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: gray;
+}
+
+.book_contents_chapter_title {
+  font-size: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.book_chapter_header {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.discourse_box {
+  width: 470px;
+  min-height: 120px;
+  background-color: #f5f5f5;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 15px 10px 15px;
+  border: 0.8px #a9a9a9 solid;
+  font-size: 8pt;
+}
+
+.discourse_box .title {
+  font-size: 9pt;
+  font-weight: bold;
+}
+
+.book_chapter_header_chapternumber {
+  font-size: 9pt;
+  color: #35373e;
+  margin-right: 5px;
+}
+
+.discourse_box .xuat_ban_trong {
+  margin-top: 15px;
+}
+
+.discourse_box .notes {
+  margin-top: 15px;
+}
+
+.book_contents_chapter_number {
+  font-size: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: gray;
+}
+
+.book_contents_chapter_title {
+  font-size: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.book_toc {
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.book_title {
+  font-size: 130%;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.booklist {
+  color: #008;
+}
+.book_list_title {
+  font-size: 120%;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.book_section h3 {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+.book_section h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.book_section h3 a:hover {
+  text-decoration: underline;
+}
+
+.book_section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.book_section li {
+  font-size: 90%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: normal;
+}
+
+.book_section li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.book_section li a:hover {
+  text-decoration: underline;
+}
+
+.book_chapter_title {
+  font-size: 120%;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+p.paragraph {
+  text-indent: 25px;
+}
+
+p.sloka {
+  margin-left: 30px;
+  font-style: italic;
+  letter-spacing: +0.2px;
+  margin-top: 5px;
+  margin-bottom: 7px;
+}
+
+p.explain {
+  margin-left: 30px;
+}
+
+p.end {
+  margin-left: 30px;
+  font-style: italic;
+}
+
+p.end_name {
+  display: flex;
+  margin-right: 50px;
+  justify-content: flex-end;
+  font-style: italic;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: gray;
+}
+
+.copyright p {
+  text-align: center;
+}
+
+.copyright_header {
+  font-style: normal;
+  margin-top: 15px;
+  margin-bottom: px;
+}
+
+.copyright_text {
+  font-style: italic;
+  margin-top: 0px;
+}
+
+p.minor_heading {
+  margin-top: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+p.note {
+  text-indent: 30px;
+  font-style: italic;
+}
+
+ol.letter_list {
+  margin-left: 60px;
+}
+
+p.footnotes_line {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+hr.footnote {
+  size: 1;
+  color: silver;
+  align: left;
+  width: 70%;
+}
+
+p.para_footnote {
+  color: gray;
+  text-indent: 15px;
+  font-size: 11px;
+  font-style: italic;
+}
+
+i {
+  color: #808080;
+  font-size: 10px;
+}
+
+li p.paragraph {
+  text-indent: 20px;
+}
+
+img.mhb {
+  width: 70vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Nav */
+.controlbar {
+  margin-top: 2px;
+  margin-left: 10px;
+  font-size: 8pt;
+}
+
+.controlbar_ss {
+  margin-top: 1px;
+  margin-left: 1px;
+  font-size: 8pt;
+}
+
+.navbar {
+  font-size: 9pt;
+  margin-top: 2px;
+}
+
+.navbar_title {
+  font-size: 90%;
+  font-weight: bold;
+}
+
+.navbar_alpha_title {
+  margin-top: 5px;
+  margin-bottom: 1px;
+}
+
+.navbar_alpha_AZ {
+  font-family: Courier, Fixed;
+  margin-left: 10px;
+  margin-top: 1px;
+  margin-bottom: 10px;
+  line-height: 110%;
+}
+
+.navbar_words {
+  font-family: Courier, Fixed;
+  margin-left: 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  line-height: 110%;
+}
+
+.navbar_help_items {
+  font-size: 90%;
+}
+
+.font-size-controls {
+  margin-top: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-bottom: 8px;
+  font-size: 9pt;
+}
+
+.font-size-controls button {
+  min-width: 10px;
+  min-height: 10px;
+  border: 1px solid #999;
+  background: #fff;
+  color: #000;
+  font-size: 12pt;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.font-size-controls button:hover {
+  background: #f0f0f0;
+}
+
+.font-size-controls span {
+  min-width: 42px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Home */
+.Home_Copyright {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  color: gray;
+  font-size: 10px;
+  line-height: 10pt;
+  text-align: center;
+}
+
+.Home_Publisher {
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.Home_Title {
+  font-size: 16pt;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.Home_Version {
+  font-size: 80%;
+  color: #000030;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* Login */

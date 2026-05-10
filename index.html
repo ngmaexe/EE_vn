@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="./Assets/img/stars.png" />
+    <title></title>
+  </head>
+  <body style="margin: 0; display: flex; height: 100vh">
+    <div style="width: 180px; display: flex; flex-direction: column">
+      <iframe
+        name="NavBar"
+        src="./Navigation/navbar.html"
+        style="flex: 1; border: none"
+        marginwidth="5"
+        marginheight="0"
+      ></iframe>
+    </div>
+    <iframe
+      name="Client"
+      src="./Navigation/home.html"
+      style="flex: 1; border: none"
+      marginwidth="20"
+      marginheight="20"
+    ></iframe>
+    <script>
+      // Script to handle bookmark saving and restoring
+      (function () {
+        const STORAGE_KEY = "lastPage";
+        const clientFrame = document.querySelector('iframe[name="Client"]');
+
+        // Function to save current page
+        function saveBookmark(url) {
+          localStorage.setItem(STORAGE_KEY, url);
+        }
+
+        // Function to restore last page
+        function restoreBookmark() {
+          const lastPage = localStorage.getItem(STORAGE_KEY);
+          if (lastPage && clientFrame) {
+            clientFrame.src = lastPage;
+          }
+        }
+
+        // Listen for messages from iframe
+        window.addEventListener("message", function (event) {
+          if (event.data && event.data.type === "updateBookmark") {
+            saveBookmark(event.data.url);
+          }
+        });
+
+        // Restore bookmark when page loads
+        window.addEventListener("load", restoreBookmark);
+      })();
+    </script>
+  </body>
+</html>
