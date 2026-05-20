@@ -6,6 +6,10 @@
   background-color: #ffc877;
 }
 
+head.title {
+  text-transform: uppercase;
+}
+
 body {
   font-family: Tahoma, "Arial Unicode MS", Gentium;
   font-size: 10pt;
@@ -84,6 +88,7 @@ ul li {
 .discourse_box .title {
   font-size: 9pt;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .book_chapter_header_chapternumber {
@@ -125,6 +130,8 @@ ul li {
   font-weight: bold;
   margin-top: 25px;
   margin-bottom: 25px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 .booklist {
   color: #008;
@@ -479,5 +486,13 @@ img.mhb {
 
   body.nav-open .mobile-nav-toggle {
     left: 190px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body:not(.index-layout) {
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
   }
 }
