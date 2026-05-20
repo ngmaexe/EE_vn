@@ -53,7 +53,7 @@ if ($items.Count -eq 0) {
 
 $bookCode = [System.IO.Path]::GetFileNameWithoutExtension($file)
 $bookSuffix = $bookCode -replace '^SS_', ''
-$heading = "Subhasita Samgraha $bookSuffix"
+$heading = "$bookSuffix"
 $hrefBase = "../Books/$file"
 
 $output = @()
