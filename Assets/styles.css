@@ -153,6 +153,7 @@ ul li {
 .book_section h3 a {
   text-decoration: none;
   color: inherit;
+  text-transform: uppercase;
 }
 
 .book_section h3 a:hover {
@@ -407,6 +408,53 @@ img.mhb {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 30px;
+}
+
+.book-search-box {
+  position: sticky;
+  top: 12px;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  margin: 12px 16px 18px 0;
+}
+
+.book-search-inner {
+  position: relative;
+  width: min(320px, calc(100vw - 32px));
+}
+
+.book-search-inner i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #777;
+  font-size: 14px;
+}
+
+#bookSearchInput {
+  width: 100%;
+  padding: 10px 14px 10px 36px;
+  border: 1px solid #d8d8d8;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 14px;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#bookSearchInput:focus {
+  border-color: #888;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.14);
+}
+
+.book-no-result {
+  display: none;
+  margin: 18px 16px;
+  color: #777;
+  font-style: italic;
+  text-align: right;
 }
 
 /* Login */
