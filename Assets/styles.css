@@ -26,7 +26,8 @@ td {
   line-height: 15pt;
 }
 
-p {
+p,
+span {
   margin-top: 6px;
   margin-bottom: 4px;
 }
@@ -191,10 +192,7 @@ ul li {
   margin-bottom: 25px;
 }
 
-p.paragraph {
-  text-indent: 25px;
-}
-
+p.paragraph,
 p.“paragraph” {
   text-indent: 25px;
 }
@@ -539,5 +537,122 @@ img.mhb {
     overflow-y: auto;
     height: auto;
     min-height: 100vh;
+  }
+}
+
+.verse-item {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Nút tiêu đề câu */
+.verse-toggle {
+  width: 100%;
+  border: none;
+  font-family: Tahoma, "Arial Unicode MS", Gentium;
+  background-color: transparent;
+  border: #000000 1px solid;
+  border-radius: 10px;
+  padding: 0px 5px;
+  font-size: 10pt;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.verse-toggle:hover .verse-title {
+  color: #000080;
+}
+
+.verse-title {
+  display: inline-block;
+}
+
+.verse-icon {
+  font-size: 13pt;
+  color: #777;
+  padding-left: 10px;
+}
+
+/* Nội dung câu - mặc định đóng */
+.verse-content {
+  display: none;
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+
+/* Khi mở */
+.verse-item.open .verse-content {
+  display: block;
+}
+
+.verse-item.open .verse-icon {
+  color: #000080;
+}
+
+/* Ảnh minh họa */
+.verse-image-wrap {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.verse-image {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+/* Từ đồng nghĩa */
+.synonym-line {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Ý nghĩa */
+.meaning-line {
+  margin-top: 15px;
+  margin-bottom: 14px;
+  padding: 7px 0 7px 16px;
+  border-left: 3px solid #7b6a43;
+  border-top: 1px solid #e6ddc6;
+  border-bottom: 1px solid #e6ddc6;
+  color: #111;
+}
+
+/* Label */
+.verse-label {
+  font-weight: bold;
+  color: #704f16;
+}
+
+.meaning-text {
+  color: #000;
+  font-weight: bold;
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .verse-toggle {
+    font-size: 10.5pt;
+    padding: 9px 0;
+  }
+
+  .verse-image {
+    width: 100%;
+    max-width: 230px;
+  }
+
+  .meaning-line {
+    padding-left: 12px;
+  }
+
+  .synonym-text,
+  .meaning-text {
+    font-size: 10pt;
   }
 }
