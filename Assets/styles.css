@@ -659,3 +659,193 @@ img.mhb {
     font-size: 10pt;
   }
 }
+/* Login screen */
+.login-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #eff7fb;
+  padding: 20px;
+}
+
+.auth-locked .login-screen,
+.show-login {
+  display: flex;
+}
+.login-page {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.show-login {
+  display: flex;
+}
+
+.auth-locked .nav-frame-wrap,
+.auth-locked .client-frame,
+.auth-locked .mobile-nav-toggle,
+.auth-locked .logout-button {
+  display: none !important;
+}
+
+/* Bear login form */
+.bear-login-form {
+  width: 100%;
+  max-width: 370px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.16);
+}
+
+.svgContainer {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.svgContainer > div,
+.mySVG {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* SVG animation base */
+.eyeL,
+.eyeR,
+.nose,
+.mouth,
+.chin,
+.face,
+.eyebrow,
+.earL,
+.earR,
+.earHair,
+.hair,
+.armL,
+.armR {
+  transform-box: fill-box;
+  transition: transform 0.45s ease;
+}
+
+.eyeL,
+.eyeR,
+.nose,
+.mouth,
+.chin,
+.face,
+.eyebrow,
+.hair {
+  transform-origin: center center;
+}
+
+.armL {
+  transform-origin: top left;
+  transform: translate(-93px, 220px) rotate(105deg);
+}
+
+.armR {
+  transform-origin: top right;
+  transform: translate(-93px, 220px) rotate(-105deg);
+}
+
+/* Khi bấm vào password: gấu che mắt */
+.bear-login-form.bear-cover .armL {
+  transform: translate(-93px, 2px) rotate(0deg);
+}
+
+.bear-login-form.bear-cover .armR {
+  transform: translate(-93px, 2px) rotate(0deg);
+}
+
+/* Form input */
+.inputGroup {
+  margin-bottom: 16px;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 6px;
+  color: #3a5e77;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #c8d7df;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.inputGroup input:focus {
+  border-color: #3a5e77;
+  box-shadow: 0 0 0 3px rgba(58, 94, 119, 0.12);
+}
+
+.helper {
+  margin: 5px 0 0;
+  color: #8a9ca8;
+  font-size: 11px;
+}
+
+.inputGroup3 button {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #3a5e77;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.inputGroup3 button:hover {
+  background: #2d4c61;
+}
+
+.login-error {
+  display: none;
+  margin-top: 12px;
+  color: #b00020;
+  text-align: center;
+  font-weight: bold;
+}
+
+.logout-button {
+  position: fixed;
+  top: 10px;
+  right: 12px;
+  z-index: 1000;
+  padding: 10px 10px;
+  border: 1px solid #c8c8c8;
+  border-radius: 8px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.logout-button i {
+  font-size: 20px;
+  color: #b00020;
+}
+
+.book-search-box {
+  padding-right: 20px;
+}
+
+.logout-button {
+  top: 10px;
+  right: 12px;
+}
+
+.logout-button:hover {
+  background: #f1f1f1;
+}

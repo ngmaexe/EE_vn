@@ -18,6 +18,11 @@
       referrerpolicy="no-referrer"
     />
     <title>hihihaha</title>
+    <script>
+      if (sessionStorage.getItem("isLoggedIn") !== "true") {
+        window.location.replace("./login.html");
+      }
+    </script>
   </head>
   <body class="index-layout" style="margin: 0; display: flex; height: 100vh">
     <button
@@ -26,6 +31,10 @@
       aria-label="Open navigation"
     >
       <i class="fa-solid fa-democrat" style="font-size: 15px"></i>
+    </button>
+
+    <button class="logout-button" id="logoutButton" type="button">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
     </button>
 
     <div
@@ -52,9 +61,18 @@
     ></iframe>
 
     <script>
+      const AUTH_KEY = "isLoggedIn";
+      const STORAGE_KEY = "lastPage";
+
       const mobileNavButton = document.querySelector(".mobile-nav-toggle");
       const clientFrame = document.querySelector('iframe[name="Client"]');
       const navFrame = document.querySelector('iframe[name="NavBar"]');
+      const logoutButton = document.getElementById("logoutButton");
+
+      logoutButton.addEventListener("click", function () {
+        sessionStorage.removeItem(AUTH_KEY);
+        window.location.replace("./login.html");
+      });
 
       mobileNavButton.addEventListener("click", function () {
         document.body.classList.toggle("nav-open");
@@ -83,30 +101,25 @@
         }
       });
 
-      // Script to handle bookmark saving and restoring
-      (function () {
-        const STORAGE_KEY = "lastPage";
-        const clientFrame = document.querySelector('iframe[name="Client"]');
+      function saveBookmark(url) {
+        localStorage.setItem(STORAGE_KEY, url);
+      }
 
-        function saveBookmark(url) {
-          localStorage.setItem(STORAGE_KEY, url);
+      function restoreBookmark() {
+        const lastPage = localStorage.getItem(STORAGE_KEY);
+
+        if (lastPage && clientFrame) {
+          clientFrame.src = lastPage;
         }
+      }
 
-        function restoreBookmark() {
-          const lastPage = localStorage.getItem(STORAGE_KEY);
-          if (lastPage && clientFrame) {
-            clientFrame.src = lastPage;
-          }
+      window.addEventListener("message", function (event) {
+        if (event.data && event.data.type === "updateBookmark") {
+          saveBookmark(event.data.url);
         }
+      });
 
-        window.addEventListener("message", function (event) {
-          if (event.data && event.data.type === "updateBookmark") {
-            saveBookmark(event.data.url);
-          }
-        });
-
-        window.addEventListener("load", restoreBookmark);
-      })();
+      window.addEventListener("load", restoreBookmark);
     </script>
   </body>
 </html>
