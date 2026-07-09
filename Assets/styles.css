@@ -667,7 +667,7 @@ img.mhb {
   display: none;
   align-items: center;
   justify-content: center;
-  background: #eff7fb;
+  background: #fff7f0;
   padding: 20px;
 }
 
@@ -772,7 +772,7 @@ img.mhb {
 .inputGroup label {
   display: block;
   margin-bottom: 6px;
-  color: #3a5e77;
+  color: #8f3a2e;
   font-weight: bold;
   font-size: 13px;
 }
@@ -787,8 +787,7 @@ img.mhb {
 }
 
 .inputGroup input:focus {
-  border-color: #3a5e77;
-  box-shadow: 0 0 0 3px rgba(58, 94, 119, 0.12);
+  border-color: #8f3a2e;
 }
 
 .helper {
@@ -802,14 +801,14 @@ img.mhb {
   padding: 12px 14px;
   border: none;
   border-radius: 8px;
-  background: #3a5e77;
+  background: #8f3a2e;
   color: #ffffff;
   font-weight: bold;
   cursor: pointer;
 }
 
 .inputGroup3 button:hover {
-  background: #2d4c61;
+  background: #8f3a2e;
 }
 
 .login-error {
