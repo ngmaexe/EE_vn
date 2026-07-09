@@ -853,14 +853,14 @@ img.mhb {
 /* Project logo + name - top right */
 .project-brand {
   position: fixed;
-  top: 10px;
+  top: 50px;
   right: 50px;
   z-index: 999;
   display: block;
 }
 
 .project-logo {
-  width: 380px;
+  width: 500px;
   object-fit: cover;
   display: block;
 }
